@@ -1,6 +1,7 @@
-import { EventsSDK } from "github.com/octarine-public/wrapper/index"
+import { Menu } from "github.com/octarine-public/wrapper/index";
 
-console.log("Hello world!")
-EventsSDK.on("GameStarted", () => {
-	console.log("Hello world!")
-})
+const armletMenu = Menu.AddEntry("Armlet");
+
+// Добавляем чекбокс (по умолчанию выключен)
+const alwaysOn = armletMenu.AddToggle("Армлет всегда включён", false);
+
